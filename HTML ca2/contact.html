@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .bg1{
+            width: 100%;
+            height: 100vh;
+            background: #03a9f4;
+        }
+        .bg2{
+            width: 100%;
+            height: 100vh;
+            background:#112d42;
+        }
+        .cinfo{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr;
+            padding: 40px 40px;
+            top: 20vh;
+            left: 20vh;
+            width: 500px;
+            background: #014768;
+            z-index: 2;
+            border-radius: 10px;
+            box-shadow: 10px 10px 25px black;
+        }
+        .cinfo h2{
+            color: white;
+            font-size: 40px;
+        }
+        .cinfo .img{
+            display: flex;
+            margin-top: 30px;
+            justify-content:left;
+        }
+        .cinfo .img p{
+            color: rgba(255,255,255,.6);
+            transition: .7s;
+            letter-spacing: 2px;
+            word-spacing: 2px;
+            font-size: 17px;
+            
+        }
+        .cinfo .img img{
+            height:50px;
+            margin-right: 20px;
+            filter: invert(1);
+            opacity: .6;
+            transition: .7s;
+        }
+        .cinfo .img img:hover{
+            opacity: 1;
+            transform: translateY(-8px);
+        }
+        .cinfo .img p:hover{
+            color: white;
+        }
+        .cinfo .img .list{
+            margin-top: 20vh;
+            display: flex;
+            list-style: none;
+        }
+        .message{
+            position: absolute;
+            display: grid;
+            grid-template-columns: 1fr;
+            padding-left:43vh;
+            top:14vh;
+            left: 36vh;
+            width: 145vh;
+            background: white;
+            z-index: 1;
+            border-radius: 5px;
+            box-shadow: 20px 20px 60px black;
+        }
+        .inputs:nth-child(1){
+            padding-top: 80px;
+            justify-content:left;
+            align-items: center;
+            text-align:bottom left;
+            font-size: 35px;
+            font-weight: bold;
+            letter-spacing: 0px;
+        }
+        .inputs:nth-child(2){
+            margin-top: 5vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .inputs:nth-child(2) .inputdata{
+            padding: 40px 0px;
+            display: flex;
+            flex-direction: column;
+        }
+        .inputs:nth-child(2) .inputdata label{
+            position: absolute;
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: .3s;
+        }
+        .inputs:nth-child(2) .inputdata input{
+            width: 70%;
+            padding-top: 10px;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            padding-bottom: 2px;
+            border-bottom: 2px solid grey;
+            transition: 1s;
+            transform-origin: left;
+        }
+        .inputs:nth-child(3) .inputdata{
+            display: flex;
+            flex-direction: column;
+        }
+        .inputs:nth-child(3) .inputdata textarea{
+            width: 70%;
+            height: 20vh;
+            font-size: 20px;
+            color: grey;
+            border: none;
+            resize: none;
+            outline: none;
+            text-decoration: none;
+            border-bottom: 2px solid grey;
+            margin-bottom: 20px;
+            transition: 1s;
+            transform-origin: left;
+        }
+        .inputs:nth-child(3) .inputdata label{
+            position: absolute;
+            font-size: 20px;
+            margin-bottom: 10px;
+            transition: .4s;
+        }
+        .message .inputs .inputdata input:focus~label{
+            transform: translateY(-20px);
+            font-size: 15px;
+            color: rgba(241, 57, 112, 0.89);
+            font-weight: bold;
+        }
+        .message .inputs .inputdata input:focus{
+            border-bottom: 3.5px solid rgba(241, 57, 112, 0.89);
+        }
+        .message .inputs .inputdata textarea:focus{
+            border-bottom: 3.5px solid rgba(241, 57, 112, 0.89);
+        }
+        .message .inputs .inputdata textarea:focus~.lb1{
+            transform: translateY(-20px);
+            font-size: 15px;
+            color: rgba(241, 57, 112, 0.89);
+            font-weight: bold;
+        }
+        .inputs:nth-child(4){
+            display: flex;
+            justify-content:left;
+            margin-bottom: 5vh;
+        }
+        .inputs:nth-child(4) button{
+            margin-top: 5vh;
+            margin-left: 30vh;
+            text-decoration: none;
+            padding: 30px 50px;
+            font-size: 20px;
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            background:rgb(15, 99, 177);
+            color: white;
+            font-weight: bold;
+            transition: .5s; 
+            box-shadow: 10px 10px 30px dimgray;
+        }
+        .inputs:nth-child(4) button:hover{
+            background-color: blueviolet;
+            color: white;
+        }
+
+    </style> 
+</head>
+<body>
+   <div class="container">
+       <div class="bg1"></div>
+       <div class="bg2"></div>
+   </div>
+   <div class="cinfo">
+    <h2>Contact Info</h2>
+    <div class="img">
+        <img src="./contactimages/loc.png">
+        <p>315 Kamdhenu Complex, lokhandwala main market Andheri (W, Andheri West, Mumbai,India)</p>
+    </div>
+    <div class="img">
+        <img src="./contactimages/email.png">
+        <p>BharartTravels@gmail.com</p>
+    </div>
+    <div class="img">
+        <img src="./contactimages/call.png">
+        <p>099997 06194</p>
+    </div>
+    <div class="img">
+        <ul class="list">
+            <li><a href="#"><img src="./contactimages/1.png"></a></li>
+            <li><a href="#"><img src="./contactimages/2.png"></a></li>
+            <li><a href="#"><img src="./contactimages/3.png"></a></li>
+            <li><a href="#"><img src="./contactimages/4.png"></a></li>
+            <li><a href="#"><img src="./contactimages/5.png"></a></li>
+        </ul>
+    </div>
+   </div>
+   <div class="message">
+    <div class="inputs">
+        Send a Message
+    </div>
+    <div class="inputs">
+        <div class="inputdata">
+            <input type="text" required>
+            <label class="lb">First Name</label>
+        </div>
+        <div class="inputdata">
+            <input type="text" required>
+            <label class="lb">Last Name</label>
+        </div>
+        <div class="inputdata">
+            <input type="text" required>
+            <label class="lb">Email Address</label>
+        </div>
+        <div class="inputdata">
+            <input type="text" required>
+            <label class="lb">Mobile Number</label>
+        </div>
+    </div>
+    <div class="inputs">
+        <div class="inputdata">
+            <textarea type="text" required></textarea>
+            <label class="lb1">Mobile Number</label>
+        </div>
+    </div>
+    <div class="inputs">
+        <button type="submit">Send</button>
+    </div>
+   </div>
+</body>
+</html>
